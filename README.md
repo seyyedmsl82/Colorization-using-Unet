@@ -10,10 +10,10 @@ This repository presents a PyTorch implementation of a UNet-based image coloriza
 - [Requirements](#requirements)
 - [Usage](#usage)
 - [Colorization Model](#colorization-model)
-- [Training](#training)
+- [Understanding UNet: A Fundamental Overview](#understanding-unet:-a-fundamental-overview)
+- [Applications of UNet](#Applications-of-UNet)
 - [Results](#results)
 - [Customization](#customization)
-- [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -81,7 +81,7 @@ UNet, introduced by Olaf Ronneberger, Philipp Fischer, and Thomas Brox in 2015, 
 
 ### Anatomy of UNet
 
-#### Encoder (Contracting Path)
+1. Encoder (Contracting Path)
 
 The UNet architecture is divided into two main parts: the encoder (contracting path) and the decoder (expansive path).
 
@@ -91,11 +91,11 @@ The UNet architecture is divided into two main parts: the encoder (contracting p
 - **Max Pooling:**
   After each convolutional block, a max-pooling operation is applied to reduce the spatial dimensions of the features, helping the model focus on more abstract and high-level features.
 
-#### Bottleneck
+2. Bottleneck
 
 The bottleneck serves as the bridge between the encoder and decoder. It is a stack of convolutional layers that retains the most essential information from the input image.
 
-#### Decoder (Expansive Path)
+3. Decoder (Expansive Path)
 
 The decoder is the symmetric counterpart to the encoder, aiming to reconstruct the spatial resolution of the input image.
 
@@ -105,21 +105,21 @@ The decoder is the symmetric counterpart to the encoder, aiming to reconstruct t
 - **Skip Connections:**
   One of the key features of UNet is the use of skip connections. The feature maps from the encoder are concatenated with the corresponding feature maps in the decoder. This enables the network to utilize both low-level and high-level features during the reconstruction process.
 
-#### Output Layer
+4. Output Layer
 
 The final layer of the decoder typically consists of a 1x1 convolutional layer, which reduces the number of channels to match the desired output.
 
 ## Applications of UNet
 
-#### Semantic Segmentation
+1. Semantic Segmentation
 
 UNet's original purpose was semantic segmentation, where it excels in delineating and classifying objects within an image. The skip connections help maintain fine-grained details during segmentation.
 
-#### Medical Image Segmentation
+2. Medical Image Segmentation
 
 UNet has been widely adopted in medical image analysis, particularly for tasks such as tumor segmentation, organ detection, and cell segmentation. Its ability to handle limited annotated data makes it suitable for medical applications.
 
-#### Image-to-Image Translation
+3. Image-to-Image Translation
 
 Due to its architecture's versatility, UNet has been applied to various image translation tasks. In image colorization, for example, a UNet model can be trained to transform grayscale images into colored versions.
 
