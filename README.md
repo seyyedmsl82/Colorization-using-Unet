@@ -10,7 +10,7 @@ This repository presents a PyTorch implementation of a UNet-based image coloriza
 - [Requirements](#requirements)
 - [Usage](#usage)
 - [Colorization Model](#colorization-model)
-- [Understanding UNet: A Fundamental Overview](#understanding-unet:-a-fundamental-overview)
+- [Understanding UNet: A Fundamental Overview](#understanding-unet-a-fundamental-overview)
 - [Applications of UNet](#Applications-of-UNet)
 - [Results](#results)
 - [Customization](#customization)
