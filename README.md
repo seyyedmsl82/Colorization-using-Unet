@@ -67,14 +67,6 @@ class UNet(nn.Module):
     return x
 ```
 
-
-
-
-
-
-
-
-
 ## Understanding UNet: A Fundamental Overview
 
 UNet, introduced by Olaf Ronneberger, Philipp Fischer, and Thomas Brox in 2015, is a convolutional neural network architecture designed for semantic segmentation tasks. Its distinctive U-shaped architecture has made it a popular choice in various image-to-image translation tasks, including medical image segmentation, image colorization, and more. This overview aims to provide a fundamental understanding of the UNet architecture, its components, and its applications.
@@ -109,6 +101,10 @@ The decoder is the symmetric counterpart to the encoder, aiming to reconstruct t
 
 The final layer of the decoder typically consists of a 1x1 convolutional layer, which reduces the number of channels to match the desired output.
 
+
+![UNet-structure](https://github.com/seyyedmsl82/Colorization-using-Unet/blob/main/The-architecture-of-Unet.png)
+
+
 ## Applications of UNet
 
 1. Semantic Segmentation
@@ -122,25 +118,6 @@ UNet has been widely adopted in medical image analysis, particularly for tasks s
 3. Image-to-Image Translation
 
 Due to its architecture's versatility, UNet has been applied to various image translation tasks. In image colorization, for example, a UNet model can be trained to transform grayscale images into colored versions.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Results
 
